@@ -1,10 +1,10 @@
-\<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Búfalas São João | Excelência em Queijos Artesanais</title>
-    <meta name="description" content="Descubra o ápice do sabor com os queijos artesanais A2A2 da Búfalas São João. Turismo rural, passeios e produtos premiados em Paraguaçu Paulista.">
+    <title>Búfalas São João | Excelência em Queijos Artesanais e Turismo</title>
+    <meta name="description" content="Descubra o ápice do sabor com os queijos artesanais A2A2 da Búfalas São João. Café da manhã na roça, almoço na fazenda, turismo rural e entregas na região.">
     
     <!-- Fontes Premium -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,9 +21,9 @@
         :root {
             --cor-primaria: #E5B80B; /* Amarelo Ouro Premium */
             --cor-primaria-hover: #CCA204;
-            --cor-fundo: #FAFAF7; /* Off-white sofisticado */
-            --cor-fundo-alt: #F0EBE1; /* Tom palha elegante */
-            --cor-texto: #1A1A1A; /* Preto quase puro */
+            --cor-fundo: #FAFAF7; 
+            --cor-fundo-alt: #F0EBE1; 
+            --cor-texto: #1A1A1A; 
             --cor-texto-mutado: #666666;
             --cor-branco: #FFFFFF;
             --cor-whatsapp: #25D366;
@@ -102,8 +102,8 @@
         .logo img { height: 55px; width: auto; transition: var(--transicao); }
         header.rolado .logo img { height: 45px; }
         
-        nav { display: flex; gap: 40px; }
-        nav a { font-weight: 500; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; transition: var(--transicao); position: relative; }
+        nav { display: flex; gap: 30px; }
+        nav a { font-weight: 500; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; transition: var(--transicao); position: relative; }
         nav a::after { content: ''; position: absolute; bottom: -8px; left: 50%; transform: translateX(-50%); width: 0; height: 2px; background-color: var(--cor-primaria); transition: var(--transicao); }
         nav a:hover::after { width: 100%; }
         nav a:hover { color: var(--cor-texto-mutado); }
@@ -188,7 +188,7 @@
         .preco span { font-size: 1rem; color: var(--cor-texto-mutado); font-family: var(--fonte-corpo); }
 
         /* =========================================
-           INFRAESTRUTURA
+           INFRAESTRUTURA E ENTREGAS
            ========================================= */
         .grid-icones { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 40px; }
         .icone-card { text-align: center; padding: 50px 30px; background: var(--cor-branco); border-radius: var(--borda-arredondada); box-shadow: var(--sombra-suave); transition: var(--transicao); border: 1px solid rgba(0,0,0,0.02); }
@@ -196,6 +196,13 @@
         .icone-card i { font-size: 2.8rem; color: var(--cor-primaria); margin-bottom: 25px; }
         .icone-card h3 { font-size: 1.4rem; margin-bottom: 12px; }
         .icone-card p { font-size: 0.95rem; color: var(--cor-texto-mutado); }
+
+        /* Estilo específico para a seção de entregas */
+        .passos-entrega { display: flex; flex-direction: column; gap: 20px; margin-top: 30px; }
+        .passo { display: flex; align-items: flex-start; gap: 20px; }
+        .passo-num { background: var(--cor-primaria); color: var(--cor-texto); width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 1.2rem; flex-shrink: 0; }
+        .passo-texto h4 { font-family: var(--fonte-corpo); font-size: 1.1rem; margin-bottom: 5px; }
+        .passo-texto p { font-size: 0.95rem; color: var(--cor-texto-mutado); }
 
         /* =========================================
            ACCORDION (MITOS E VERDADES)
@@ -369,8 +376,8 @@
         <nav>
             <a href="#sobre">Sobre</a>
             <a href="#loja">Loja</a>
-            <a href="#passeios">Passeios</a>
-            <a href="#estrutura">Estrutura</a>
+            <a href="#experiencias">Experiências</a>
+            <a href="#entregas">Entregas</a>
             <a href="#mitos">Dúvidas</a>
             <a href="#contato">Contato</a>
         </nav>
@@ -405,7 +412,6 @@
                 </div>
             </div>
             <div class="img-destaque-wrapper">
-                <!-- Foto da Búfala -->
                 <img src="images/bufala.JPG" alt="Búfala no campo" class="img-destaque" onerror="this.src='https://images.unsplash.com/photo-1590405622837-2b1a5f2c4b7a?q=80&w=800&auto=format&fit=crop'">
             </div>
         </div>
@@ -425,25 +431,92 @@
         </div>
     </section>
 
-    <!-- PASSEIOS COM AS BÚFALAS -->
-    <section id="passeios" class="secao">
-        <div class="container grid-duplo revelar">
-            <div class="img-destaque-wrapper" style="order: 2;">
-                <!-- Foto do Café da Manhã/Passeio -->
-                <img src="cafe-manha.jpg" alt="Passeio com as búfalas" class="img-destaque" onerror="this.src='https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=800&auto=format&fit=crop'">
+    <!-- EXPERIÊNCIAS (CAFÉ DA MANHÃ E ALMOÇO) -->
+    <section id="experiencias" class="secao">
+        <div class="container">
+            <div class="cabecalho-secao revelar">
+                <span class="tag-secao">Gastronomia no Campo</span>
+                <h2 class="titulo-secao">Venha Viver o Campo</h2>
+                <p class="subtitulo-secao">Finais de semana com experiências gastronômicas inesquecíveis.</p>
             </div>
-            <div class="texto-destaque" style="order: 1;">
-                <span class="tag-secao">Turismo Rural</span>
-                <h2>Passeios com as Búfalas</h2>
-                <p>Venha viver uma experiência inesquecível nos finais de semana! Oferecemos passeios guiados para conhecer de perto as nossas búfalas e a rotina da fazenda.</p>
-                <p>Aproveite também o nosso delicioso café da manhã rural, com pães de queijo quentinhos, bolos caseiros e o melhor café fresco.</p>
-                <a href="https://wa.me/5518996438262?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20passeio%20com%20as%20b%C3%BAfalas.%0A%0A*Nome:*%20%0A*Data:*%20%0A*Quantidade%20de%20Pessoas:*%20" target="_blank" class="btn btn-escuro" style="margin-top: 20px;">Agendar Passeio</a>
+
+            <!-- CAFÉ DA MANHÃ -->
+            <div class="grid-duplo revelar" style="margin-bottom: 80px;">
+                <div class="img-destaque-wrapper">
+                    <img src="cafe-manha.jpg" alt="Café da Manhã na Roça" class="img-destaque" onerror="this.src='https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=800&auto=format&fit=crop'">
+                </div>
+                <div class="texto-destaque">
+                    <span class="tag-secao">Domingo de Sol</span>
+                    <h2>Café da Manhã na Roça</h2>
+                    <p>Amanhã tem café! O domingo de sol que a gente esperava. Venha saborear uma mesa farta com pães de queijo quentinhos, bolos caseiros, queijos artesanais e o melhor café fresco.</p>
+                    <p>Tudo isso com a vista deslumbrante da nossa fazenda e das nossas búfalas.</p>
+                    <a href="https://wa.me/5518996438262?text=Ol%C3%A1!%20Gostaria%20de%20reservar%20o%20Caf%C3%A9%20da%20Manh%C3%A3.%0A%0A*Nome:*%20%0A*Data:*%20%0A*Quantidade%20de%20Pessoas:*%20" target="_blank" class="btn btn-primario" style="margin-top: 20px;">Reservar Café da Manhã</a>
+                </div>
+            </div>
+
+            <!-- ALMOÇO -->
+            <div class="grid-duplo revelar">
+                <div class="texto-destaque">
+                    <span class="tag-secao">Almoço na Fazenda</span>
+                    <h2>O Verdadeiro Churrasco</h2>
+                    <p>Venha curtir um almoço na fazenda! Oferecemos um churrasco delicioso (espetinhos e carnes na tábua) acompanhado de uma variedade incrível de saladas frescas e pratos quentes.</p>
+                    <p>Uma refeição completa e harmonizada com o clima do campo. Traga a família!</p>
+                    <a href="https://wa.me/5518996438262?text=Ol%C3%A1!%20Gostaria%20de%20reservar%20o%20Almo%C3%A7o%20na%20Fazenda.%0A%0A*Nome:*%20%0A*Data:*%20%0A*Quantidade%20de%20Pessoas:*%20" target="_blank" class="btn btn-escuro" style="margin-top: 20px;">Reservar Almoço</a>
+                </div>
+                <div class="img-destaque-wrapper">
+                    <img src="almoco.jpg" alt="Almoço na Fazenda" class="img-destaque" onerror="this.src='https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=800&auto=format&fit=crop'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ENTREGAS (COMO FUNCIONA) -->
+    <section id="entregas" class="secao fundo-alt">
+        <div class="container grid-duplo revelar">
+            <div class="img-destaque-wrapper">
+                <img src="entrega.jpg" alt="Van de Entrega Búfalas São João" class="img-destaque" onerror="this.src='https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?q=80&w=800&auto=format&fit=crop'">
+            </div>
+            <div class="texto-destaque">
+                <span class="tag-secao">Logística Própria</span>
+                <h2>Como Funciona Nossas Entregas?</h2>
+                <p>Da nossa fazenda para a sua mesa com todo o carinho e frescor.</p>
+                
+                <div class="passos-entrega">
+                    <div class="passo">
+                        <div class="passo-num">1</div>
+                        <div class="passo-texto">
+                            <h4>Faça seu pedido pelo WhatsApp</h4>
+                            <p>Atendemos pedidos até a noite anterior à entrega.</p>
+                        </div>
+                    </div>
+                    <div class="passo">
+                        <div class="passo-num">2</div>
+                        <div class="passo-texto">
+                            <h4>Separamos com carinho</h4>
+                            <p>Nossa equipe prepara tudo fresquinho na fazenda.</p>
+                        </div>
+                    </div>
+                    <div class="passo">
+                        <div class="passo-num">3</div>
+                        <div class="passo-texto">
+                            <h4>Entrega Semanal</h4>
+                            <p>Entregamos 1x por semana nas cidades de Assis, Cândido Mota e Paraguaçu Paulista, no período da tarde.</p>
+                        </div>
+                    </div>
+                    <div class="passo">
+                        <div class="passo-num">4</div>
+                        <div class="passo-texto">
+                            <h4>Receba em Casa</h4>
+                            <p>Produtos frescos, artesanais e feitos com 100% leite de búfala. Pagamento via Pix, Débito ou Crédito.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- INFRAESTRUTURA -->
-    <section id="estrutura" class="secao fundo-alt">
+    <section id="estrutura" class="secao">
         <div class="container">
             <div class="cabecalho-secao revelar">
                 <span class="tag-secao">Conforto</span>
@@ -471,7 +544,7 @@
     </section>
 
     <!-- MITOS E VERDADES -->
-    <section id="mitos" class="secao">
+    <section id="mitos" class="secao fundo-alt">
         <div class="container">
             <div class="cabecalho-secao revelar">
                 <span class="tag-secao">Informação</span>
@@ -514,7 +587,7 @@
     </section>
 
     <!-- CONTATO -->
-    <section id="contato" class="secao fundo-alt">
+    <section id="contato" class="secao">
         <div class="container">
             <div class="cabecalho-secao revelar">
                 <span class="tag-secao">Localização</span>
@@ -550,48 +623,12 @@
     <script>
         // Catálogo de Produtos
         const produtos = [
-            { 
-                id: 1, 
-                nome: "Queijo Fresco", 
-                preco: 35.00, 
-                img: "images/queijo.JPG", 
-                desc: "Macio e leve, perfeito para o café da manhã." 
-            },
-            { 
-                id: 2, 
-                nome: "Mozzarella de Búfala", 
-                preco: 45.00, 
-                img: "images/mozzarella.JPG", 
-                desc: "Elástica e saborosa, ideal para tábuas e pizzas." 
-            },
-            { 
-                id: 3, 
-                nome: "Queijos Artesanais", 
-                preco: 50.00, 
-                img: "images/queijos diversos.JPG", 
-                desc: "Variedade premium para recepção e mesa de café." 
-            },
-            { 
-                id: 4, 
-                nome: "Tábua de Queijos", 
-                preco: 75.00, 
-                img: "images/queijos.JPG", 
-                desc: "Seleção especial de queijos curados." 
-            },
-            { 
-                id: 5, 
-                nome: "Doce de Leite", 
-                preco: 25.00, 
-                img: "images/doce de leite.JPG", 
-                desc: "Artesanal, cremoso e irresistível." 
-            },
-            { 
-                id: 6, 
-                nome: "Doces Caseiros", 
-                preco: 22.00, 
-                img: "images/bolos.JPG", 
-                desc: "Bolos e doces feitos com carinho." 
-            }
+            { id: 1, nome: "Queijo Fresco", preco: 35.00, img: "images/queijo.JPG", desc: "Macio e leve, perfeito para o café da manhã." },
+            { id: 2, nome: "Mozzarella de Búfala", preco: 45.00, img: "images/mozzarella.JPG", desc: "Elástica e saborosa, ideal para tábuas e pizzas." },
+            { id: 3, nome: "Queijos Artesanais", preco: 50.00, img: "images/queijos diversos.JPG", desc: "Variedade premium para recepção e mesa de café." },
+            { id: 4, nome: "Tábua de Queijos", preco: 75.00, img: "images/queijos.JPG", desc: "Seleção especial de queijos curados." },
+            { id: 5, nome: "Doce de Leite", preco: 25.00, img: "images/doce de leite.JPG", desc: "Artesanal, cremoso e irresistível." },
+            { id: 6, nome: "Doces Caseiros", preco: 22.00, img: "images/bolos.JPG", desc: "Bolos e doces feitos com carinho." }
         ];
 
         let carrinho = [];
